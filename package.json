@@ -1,12 +1,41 @@
 {
-  "name": "background-remover",
+  "name": "offline-background-remover",
+  "description": "Remove background from images offline throug terminal",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "dist/index.js",
+  "bin": {
+    "offline-background-remover": "./bin/cli.js"
   },
-  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx ./bin/cli.js",
+    "build": "tsc",
+    "start": "node ./bin/cli.js",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "deep-learning",
+    "machine-learning",
+    "deep-learning",
+    "image-processing",
+    "image-segmentation",
+    "background-removal",
+    "background-segmentation",
+    "background-mask",
+    "remove-background",
+    "remove-background-offline",
+    "remove-background-online",
+    "remove-background-online-api",
+    "remove-background-online-api-key",
+    "remove-background-online-api-key-free",
+    "remove-background-online-api-key-free-no-key",
+    "remove-background-online-api-key-free-no-key-no-key"
+  ],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  }
 }
