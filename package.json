@@ -32,6 +32,7 @@
     "remove-background-online-api-key-free-no-key",
     "remove-background-online-api-key-free-no-key-no-key"
   ],
+  "type": "module",
   "author": "",
   "license": "ISC",
   "devDependencies": {
