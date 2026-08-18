@@ -1,47 +1,53 @@
 {
   "name": "offline-background-remover",
-  "description": "Remove background from images offline throug terminal",
+  "description": "Remove photo backgrounds offline from the terminal, without an API",
   "version": "1.0.0",
   "main": "dist/index.js",
   "bin": {
+    "bk-remover": "./bin/cli.js",
     "offline-background-remover": "./bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx ./bin/cli.js",
+    "test": "npm run build && node --test tests/cli.test.js tests/images.test.js tests/model.test.js",
+    "dev": "tsx ./src/index.ts",
     "build": "tsc",
     "start": "node ./bin/cli.js",
     "prepack": "npm run build"
   },
+  "files": [
+    "bin",
+    "dist",
+    "models",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "keywords": [
     "ai",
-    "deep-learning",
-    "machine-learning",
-    "deep-learning",
+    "cli",
+    "offline",
+    "onnx",
+    "modnet",
     "image-processing",
     "image-segmentation",
     "background-removal",
-    "background-segmentation",
-    "background-mask",
     "remove-background",
-    "remove-background-offline",
-    "remove-background-online",
-    "remove-background-online-api",
-    "remove-background-online-api-key",
-    "remove-background-online-api-key-free",
-    "remove-background-online-api-key-free-no-key",
-    "remove-background-online-api-key-free-no-key-no-key"
+    "remove-background-offline"
   ],
   "type": "module",
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "@xenova/transformers": "^2.17.2",
     "commander": "^15.0.0",
+    "onnxruntime-node": "1.24.3",
     "ora": "^9.4.1",
     "picocolors": "^1.1.1",
     "sharp": "^0.35.3"
